@@ -21,6 +21,3 @@
    -- Minor projects
    ---- Responsiveness
    ---- What I've learned
-
-Mobile-responsive
-git init
