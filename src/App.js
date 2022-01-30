@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Bio from './components/Bio'
+import WorkMajor from './components/WorkMajor'
+import WorkMinor from './components/WorkMinor'
+import Contact from './components/Contact'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="transition-all bg-white dark:bg-gray-800">
+        <Header />
+        <Bio />
+        <WorkMajor />
+        <WorkMinor />
+        <Contact />
+      </div>
     </div>
   );
 }
