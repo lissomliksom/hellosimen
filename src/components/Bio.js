@@ -42,6 +42,10 @@ const Bio = () => {
     ],
   })
 
+  /*
+   *  Upcoming functionality: Modals with details.
+   *
+  
   const technologies = [
     {
       title: "HTML",
@@ -54,6 +58,7 @@ const Bio = () => {
       ]
     }
   ]
+  */
 
   return(
     <section>
@@ -65,15 +70,17 @@ const Bio = () => {
               key={bio}
               className={({ selected }) =>
                 classNames(
-                  'py-1 leading-5 font-medium text-gray-700 text-sm',
+                  'py-1 leading-5 font-medium text-zinc-700 text-sm',
                   'focus:outline-none',
                   selected
-                    ? 'underline decoration-[#260388] decoration-wavy decoration-2 underline-offset-8 font-semibold'
-                    : 'text-gray-400 hover:text-gray-900'
+                    ? 'underline decoration-[#260388] decoration-wavy decoration-2 underline-offset-8 font-semibold dark:decoration-white'
+                    : 'text-zinc-400 hover:text-zinc-900'
                 )
               }
             >
-              {bio}
+              <div className="dark:text-zinc-300">
+                {bio}
+              </div>
             </Tab>
           ))}
         </Tab.List>
@@ -83,7 +90,9 @@ const Bio = () => {
               key={idx}
               className={classNames(
                 'py-2',
-                'focus:outline-none'
+                'focus:outline-none',
+                'dark:text-zinc-300'
+                
               )}
             >
               <div className="h-80">
@@ -93,11 +102,9 @@ const Bio = () => {
                       key={idx}
                       className="relative py-1"
                     >
-                      <div className="prose max-w-prose">
+                      <div className="prose max-w-prose dark:text-zinc-400">
                           {bio.content.map((paragraph, idx) => (
-                            <p 
-                              key={idx}
-                              className="pb-3">
+                            <p key={idx}>
                               {paragraph}
                             </p>
                           ))}
@@ -106,7 +113,7 @@ const Bio = () => {
                         {bio.tags.map((tag, idx) => (
                             <button
                               key={idx}
-                              className="px-2 py-0.5 bg-gray-200 text-gray-700 rounded text-xs">
+                              className="px-2 py-0.5 bg-zinc-200 text-zinc-700 rounded text-xs dark:bg-zinc-600 dark:text-zinc-400">
                               {tag}
                             </button>
                           ))}
@@ -115,7 +122,7 @@ const Bio = () => {
                         {bio.tagsDetails.map((tag, idx) => (
                             <button
                               key={idx}
-                              className="px-2 py-0.5 bg-gray-50 text-gray-500 rounded text-xs">
+                              className="px-2 py-0.5 bg-zinc-50 text-zinc-500 rounded text-xs dark:bg-zinc-700 dark:text-zinc-500">
                               {tag}
                             </button>
                           ))}

@@ -9,66 +9,83 @@ import Work4 from '../images/work4.png'
 
 const WorkMajor = () => {
 
-  const workImages = [
+  const workMajorDetails = [
     {
       title: 'Lesekloden frontpage',
       image: Work1,
+      description: 'The landingpage for Lesekloden.no.',
+      details: 'Minimalistic design with CTAs for Leseklodens two user-groups: Children and teachers.',
+      url: 'https://www.lesekloden.no'
     },
     {
       title: 'Lesekloden themepage',
-      image: Work2
+      image: Work2,
+      description: 'One of Leseklodens multiple themepages.',
+      details: 'Includes accessible modals and tabbed content for multiple languages. All data fetched with Axios.',
+      url: 'https://www.lesekloden.no/tema/fugler'
     },
     {
       title: 'Lesekloden puzzle game',
-      image: Work3
+      image: Work3,
+      description: 'One of Leseklodens most popular games.',
+      details: 'Generated math-tasks with 17 levels of difficulty. Reveals images gradually through a grid, depending on selected theme.',
+      url: 'https://www.lesekloden.no/plusslespill'
     },
     {
       title: 'Lesekloden worksheets',
-      image: Work4
+      image: Work4,
+      description: 'Grid-view of Leseklodens free worksheets available for download.',
+      details: 'All data is loaded conditionally via database, dependant on membership status.',
+      url: 'https://www.lesekloden.no/fag/4'
     },
   ]
 
-  const [activeImage, setActiveImage] = useState(0)
+  const [activeDetails, setActiveDetails] = useState(0)
 
   return(
     <section>
       <div className="container px-5 py-16 mx-auto">
-        <h2 className="text-7xl dark:text-gray-50">work</h2>
-        <div className="py-6 prose prose-zinc max-w-prose">
+        <h2 className="text-7xl dark:text-zinc-50">work</h2>
+        <div className="max-w-4xl py-6 prose prose-zinc dark:text-zinc-400">
           <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            My main project for the last 3+ years is Lesekloden.no, a norwegian learning portal and teaching resource for children and teachers in grade 1. - 7.
+          </p>
+          <p>
+            Version 1 of the site was built with a Wordpress backend and BulmaCSS frontend, with custom modules built in PHP.<br />
+            Version 2 is built with a Laravel 8 PHP / MySQL backend, and frontend in TailwindCSS v3 and AlpineJS v3. 
+          </p>
+          <p>
+            
+          </p>
+          <p>
+            Lesekloden was nominated for <em>Hobbyproject of the Year</em> on Kode24.no in 2020.
           </p>
         </div>
 
         <div className="flex justify-between gap-6">
           <div className="w-10/12">
             <img 
-              className="w-full transition duration-500 ease-in-out rounded-sm grayscale-25 opacity-95 hover:opacity-100 hover:grayscale-0"
-              src={workImages[activeImage].image} 
-              alt={workImages[activeImage].title}
+              className="w-full transition duration-500 ease-in-out rounded-sm zincscale-25 opacity-95 hover:opacity-100 hover:zincscale-0"
+              src={workMajorDetails[activeDetails].image} 
+              alt={workMajorDetails[activeDetails].title}
             />
           </div>
-          <div className="w-2/12">
+          <div className="w-2/12 space-y-2">
 
-            <a 
-              className="flex mb-3 text-gray-400 cursor-not-allowed"
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {/* Github logo */}
-              <svg viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 mr-3">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-              </svg>
-              GitHub (private)
-            </a>
+            <div className="font-semibold dark:text-white">
+              {workMajorDetails[activeDetails].title}
+            </div>
+            <div className="text-zinc-800 dark:text-zinc-300">
+              {workMajorDetails[activeDetails].description}
+            </div>
+            <div className="text-zinc-500">
+              {workMajorDetails[activeDetails].details}
+            </div>
 
+            <div className="pt-3 border-t">
             <a 
-              className="flex"
-              href="https://www.lesekloden.no"
+              className="flex hover:underline dark:text-white"
+              href={workMajorDetails[activeDetails].url}
               target="_blank"
               rel="noreferrer"
             >
@@ -78,17 +95,18 @@ const WorkMajor = () => {
               </svg>
               External link
             </a>
+            </div>
 
           </div>
         </div>
 
         <div className="flex gap-3 my-3">
-          {workImages.map((image, idx) => ( 
+          {workMajorDetails.map((image, idx) => ( 
             <button
               key={idx} 
-              className="w-40 transition duration-200 ease-in-out rounded-sm grayscale-75 opacity-95 hover:opacity-100 hover:grayscale-0 focus:grayscale-75 focus:ring-2 focus:outline-none focus:ring-zinc-800 focus:ring-offset-2"
+              className="w-40 transition duration-200 ease-in-out rounded-sm zincscale-75 opacity-95 hover:opacity-100 hover:zincscale-0 focus:zincscale-75 focus:ring-2 focus:outline-none focus:ring-zinc-800 focus:ring-offset-2"
               onClick={() => (
-                  setActiveImage(idx)
+                  setActiveDetails(idx)
                 )
               }
               >

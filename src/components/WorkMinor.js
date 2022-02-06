@@ -32,6 +32,13 @@ const WorkMinor = () => {
       url: 'https://lissomliksom.github.io/rainbow-classless/',
     },
     {
+      title: 'Printsheet',
+      content: 'When producing custom worksheets for Lesekloden i needed specific styles for print. There are many stylesheets for print out there, but none were a perfect fit. So I created my own.',
+      tech: 'CSS',
+      github: 'https://github.com/lissomliksom/printsheet',
+      url: false,
+    },
+    {
       title: 'Lesekloden v1',
       content: 'First version of my main project, Lesekloden.no. Used a lot of custom configurations to Wordpress, including a complete custom design system.',
       tech: 'Built with Wordpress and BulmaCSS',
@@ -43,8 +50,8 @@ const WorkMinor = () => {
   return(
     <section>
       <div className="container px-5 py-6 mx-auto">
-        <h3 className="text-4xl">minor projects</h3>
-        <div className="py-6 prose prose-zinc max-w-prose">
+        <h3 className="text-4xl dark:text-zinc-50">minor projects</h3>
+        <div className="py-6 prose prose-zinc dark:text-zinc-400">
           <p>
             Personal projects and tools for prototyping and learning purposes.
           </p>
@@ -53,7 +60,7 @@ const WorkMinor = () => {
         {minorProjects.map((project, idx) => ( 
           <div 
             key={idx}
-            className="px-3 py-8 mb-1 rounded-sm bg-zinc-50 hover:bg-zinc-100"
+            className="px-3 py-8 mb-1 rounded-sm bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:text-zinc-500 dark:text-zinc-600"
           > 
           <Disclosure>
             {({ open }) => (
@@ -62,7 +69,7 @@ const WorkMinor = () => {
                   <span className="mr-2 font-semibold">{project.title}</span>
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    className={`${open ? 'transform rotate-180 text-gray-900' : ''} w-5 h-5 text-gray-400`} 
+                    className={`${open ? 'transform rotate-180 text-zinc-900 dark:text-zinc-300' : ''} w-5 h-5 text-zinc-400`} 
                     viewBox="0 0 20 20"
                     fill="currentColor">
                     <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
@@ -79,17 +86,17 @@ const WorkMinor = () => {
                   <Disclosure.Panel>
                     <div className="flex justify-between gap-6">
                       <div className="w-10/12">
-                        <div className="leading-relaxed prose max-w-prose">
+                        <div className="leading-relaxed prose-zinc max-w-prose">
                           <p>
                             {project.content}
                           </p>
-                          <p className="mt-2 text-sm text-gray-700">
+                          <p className="mt-2 text-sm text-zinc-700">
                             {project.tech}
                           </p>
                         </div>
                       </div>
                       <div className="w-2/12">
-                        <div className={project.github ? 'text-gray-700 hover:text-gray-900' : 'text-gray-200 cursor-not-allowed'}>
+                        <div className={project.github ? 'text-zinc-700 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-300' : 'text-zinc-200 dark:text-zinc-700 cursor-not-allowed line-through'}>
                           <a 
                             className="flex mb-3"
                             href={project.github}
@@ -104,7 +111,7 @@ const WorkMinor = () => {
                           </a>
                         </div>
 
-                        <div className={project.url ? 'text-gray-700 hover:text-gray-900' : 'text-gray-200 cursor-not-allowed'}>
+                        <div className={project.url ? 'text-zinc-700 hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-300' : 'text-zinc-200 dark:text-zinc-700 cursor-not-allowed line-through'}>
                           <a 
                             className="flex"
                             href={project.url}
