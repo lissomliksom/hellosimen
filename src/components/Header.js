@@ -47,7 +47,7 @@ const Header = ({ theme, setTheme }) => {
       <div 
         className="container flex items-end justify-between px-5 py-6 mx-auto"
       >
-        <div className="w-10/12">
+        <div className="md:w-10/12">
           <h1 className="hidden text-lg md:flex md:space-x-6">
             <span className="text-zinc-600">Portfolio</span>
             <span className="font-semibold">&middot;</span>
@@ -55,7 +55,7 @@ const Header = ({ theme, setTheme }) => {
           </h1>
         </div>
 
-        <div className="w-2/12">
+        <div className="md:w-2/12">
           <div className="flex space-x-2">
             <button 
               onClick={() => themeHandler()}

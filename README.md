@@ -5,21 +5,22 @@
 
 2. bio.
    -- Technologies:
-   ---- Modals
+   ---- Modals for each tech / framework
 
 3. work.
 
-   -- Major projects
-   ---- Description
-   ---- Responsiveness
-   ---- Technologies
-   ---- Frameworks
-   ---- What I've learned
-   ---- Notable subpages (Plusslespill, temasider...). Description + link
-
-   -- Minor projects
+   -- Major projects: Descriptions
    ---- Responsiveness
    ---- What I've learned
 
-Legg inn Kode24, Tag om TALL-stack, detaljer om TALL-stack i Lesekloden-bio.
-Printsheet
+   -- Minor projects: Descriptions
+   ---- Responsiveness
+   ---- What I've learned
+
+   -- Completed Courses
+   ---- Traversy Media: Laravel
+   ---- Traversy Media: Modern Javascript
+   ---- Better Dev: Tailwind
+
+4. other
+   -- Clean up component-structure

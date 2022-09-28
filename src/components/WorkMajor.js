@@ -46,9 +46,9 @@ const WorkMajor = () => {
     <section>
       <div className="container px-5 py-16 mx-auto">
         <h2 className="text-7xl dark:text-zinc-50">work</h2>
-        <div className="max-w-4xl py-6 prose prose-zinc dark:text-zinc-400">
+        <div className="max-w-4xl py-6 mb-6 prose prose-zinc dark:text-zinc-400">
           <p>
-            My main project for the last 3+ years is Lesekloden.no, a norwegian learning portal and teaching resource for children and teachers in grade 1. - 7.
+            My main project for the last 3+ years is Lesekloden.no, one of Norway's largest educational websites for teachers and children in grade 1. - 7.
           </p>
           <p>
             Version 1 of the site was built with a Wordpress backend and BulmaCSS frontend, with custom modules built in PHP.<br />
@@ -62,15 +62,40 @@ const WorkMajor = () => {
           </p>
         </div>
 
-        <div className="flex justify-between gap-6">
-          <div className="w-10/12">
+        <div className="text-sm text-zinc-500">
+          Click thumbnails for details.
+        </div>
+
+        <div className="flex gap-3 my-3">
+          {workMajorDetails.map((image, idx) => ( 
+            <button
+              key={idx} 
+              className="w-40 transition duration-200 ease-in-out rounded-sm zincscale-75 opacity-95 hover:opacity-100 hover:zincscale-0 focus:zincscale-75 focus:ring-2 focus:outline-none focus:ring-zinc-800 focus:ring-offset-2"
+              onClick={() => (
+                  setActiveDetails(idx)
+                )
+              }
+              >
+              <img
+                className="rounded-sm object-fit"              
+                src={image.image}
+                alt={image.title}
+              />
+            </button>
+          ))}
+        </div>
+
+        <div className="flex flex-col justify-between gap-6 md:flex-row">
+
+          <div className="order-last w-full md:w-10/12 md:order-first">
             <img 
               className="w-full transition duration-500 ease-in-out rounded-sm zincscale-25 opacity-95 hover:opacity-100 hover:zincscale-0"
               src={workMajorDetails[activeDetails].image} 
               alt={workMajorDetails[activeDetails].title}
             />
           </div>
-          <div className="w-2/12 space-y-2">
+
+          <div className="order-first w-full space-y-2 md:w-2/12 md:order-last">
 
             <div className="font-semibold dark:text-white">
               {workMajorDetails[activeDetails].title}
@@ -98,26 +123,6 @@ const WorkMajor = () => {
             </div>
 
           </div>
-        </div>
-
-        <div className="flex gap-3 my-3">
-          {workMajorDetails.map((image, idx) => ( 
-            <button
-              key={idx} 
-              className="w-40 transition duration-200 ease-in-out rounded-sm zincscale-75 opacity-95 hover:opacity-100 hover:zincscale-0 focus:zincscale-75 focus:ring-2 focus:outline-none focus:ring-zinc-800 focus:ring-offset-2"
-              onClick={() => (
-                  setActiveDetails(idx)
-                )
-              }
-              >
-              <img
-                className="rounded-sm object-fit"              
-                src={image.image}
-                alt={image.title}
-              />
-            </button>
-          ))}
-
         </div>
 
       </div>
