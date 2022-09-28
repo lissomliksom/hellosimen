@@ -1,6 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 
-import { MINORPROJECTS } from "../constants/projects";
+import { MINOR_PROJECTS } from "../constants/projects";
 
 const WorkMinor = () => {
   return (
@@ -13,7 +13,7 @@ const WorkMinor = () => {
           </p>
         </div>
 
-        {MINORPROJECTS.map((project, idx) => (
+        {MINOR_PROJECTS.map((project, idx) => (
           <div
             key={idx}
             className="px-3 py-8 mb-1 rounded-sm bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:text-zinc-500 dark:text-zinc-600"

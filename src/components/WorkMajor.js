@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { MAJORPROJECTS } from "../constants/projects";
+import { MAJOR_PROJECTS } from "../constants/projects";
 
 const WorkMajor = () => {
   const [activeDetails, setActiveDetails] = useState(0);
@@ -34,7 +34,7 @@ const WorkMajor = () => {
         </div>
 
         <div className="flex gap-3 my-3">
-          {MAJORPROJECTS.map((image, idx) => (
+          {MAJOR_PROJECTS.map((image, idx) => (
             <button
               key={idx}
               className="w-40 transition duration-200 ease-in-out rounded-sm zincscale-75 opacity-95 hover:opacity-100 hover:zincscale-0 focus:zincscale-75 focus:ring-2 focus:outline-none focus:ring-zinc-800 focus:ring-offset-2"
@@ -53,26 +53,26 @@ const WorkMajor = () => {
           <div className="order-last w-full md:w-10/12 md:order-first">
             <img
               className="w-full transition duration-500 ease-in-out rounded-sm zincscale-25 opacity-95 hover:opacity-100 hover:zincscale-0"
-              src={MAJORPROJECTS[activeDetails].image}
-              alt={MAJORPROJECTS[activeDetails].title}
+              src={MAJOR_PROJECTS[activeDetails].image}
+              alt={MAJOR_PROJECTS[activeDetails].title}
             />
           </div>
 
           <div className="order-first w-full space-y-2 md:w-2/12 md:order-last">
             <div className="font-semibold dark:text-white">
-              {MAJORPROJECTS[activeDetails].title}
+              {MAJOR_PROJECTS[activeDetails].title}
             </div>
             <div className="text-zinc-800 dark:text-zinc-300">
-              {MAJORPROJECTS[activeDetails].description}
+              {MAJOR_PROJECTS[activeDetails].description}
             </div>
             <div className="text-zinc-500">
-              {MAJORPROJECTS[activeDetails].details}
+              {MAJOR_PROJECTS[activeDetails].details}
             </div>
 
             <div className="pt-3 border-t">
               <a
                 className="flex hover:underline dark:text-white"
-                href={MAJORPROJECTS[activeDetails].url}
+                href={MAJOR_PROJECTS[activeDetails].url}
                 target="_blank"
                 rel="noreferrer"
               >

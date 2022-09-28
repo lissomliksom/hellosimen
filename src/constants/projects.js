@@ -3,7 +3,7 @@ import Work2 from "../images/work2.png";
 import Work3 from "../images/work3.png";
 import Work4 from "../images/work4.png";
 
-export const MAJORPROJECTS = [
+export const MAJOR_PROJECTS = [
   {
     title: "Lesekloden frontpage",
     image: Work1,
@@ -39,7 +39,7 @@ export const MAJORPROJECTS = [
   },
 ];
 
-export const MINORPROJECTS = [
+export const MINOR_PROJECTS = [
   {
     title: "Portfolio",
     content: "The page you're currently viewing.",
