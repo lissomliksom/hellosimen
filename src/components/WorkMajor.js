@@ -1,47 +1,8 @@
 import { useState } from "react";
 
-import Work1 from "../images/work1.png";
-import Work2 from "../images/work2.png";
-import Work3 from "../images/work3.png";
-import Work4 from "../images/work4.png";
+import { MAJORPROJECTS } from "../constants/projects";
 
 const WorkMajor = () => {
-  const workMajorDetails = [
-    {
-      title: "Lesekloden frontpage",
-      image: Work1,
-      description: "The landingpage for Lesekloden.no.",
-      details:
-        "Minimalistic design with CTAs for Leseklodens two user-groups: Children and teachers.",
-      url: "https://www.lesekloden.no",
-    },
-    {
-      title: "Lesekloden themepage",
-      image: Work2,
-      description: "One of Leseklodens multiple themepages.",
-      details:
-        "Includes accessible modals and tabbed content for multiple languages. All data fetched with Axios.",
-      url: "https://www.lesekloden.no/tema/fugler",
-    },
-    {
-      title: "Lesekloden puzzle game",
-      image: Work3,
-      description: "One of Leseklodens most popular games.",
-      details:
-        "Generated math-tasks with 17 levels of difficulty. Reveals images gradually through a grid, depending on selected theme.",
-      url: "https://www.lesekloden.no/plusslespill",
-    },
-    {
-      title: "Lesekloden worksheets",
-      image: Work4,
-      description:
-        "Grid-view of Leseklodens free worksheets available for download.",
-      details:
-        "All data is loaded conditionally via database, dependant on membership status.",
-      url: "https://www.lesekloden.no/fag/4",
-    },
-  ];
-
   const [activeDetails, setActiveDetails] = useState(0);
 
   return (
@@ -73,7 +34,7 @@ const WorkMajor = () => {
         </div>
 
         <div className="flex gap-3 my-3">
-          {workMajorDetails.map((image, idx) => (
+          {MAJORPROJECTS.map((image, idx) => (
             <button
               key={idx}
               className="w-40 transition duration-200 ease-in-out rounded-sm zincscale-75 opacity-95 hover:opacity-100 hover:zincscale-0 focus:zincscale-75 focus:ring-2 focus:outline-none focus:ring-zinc-800 focus:ring-offset-2"
@@ -92,26 +53,26 @@ const WorkMajor = () => {
           <div className="order-last w-full md:w-10/12 md:order-first">
             <img
               className="w-full transition duration-500 ease-in-out rounded-sm zincscale-25 opacity-95 hover:opacity-100 hover:zincscale-0"
-              src={workMajorDetails[activeDetails].image}
-              alt={workMajorDetails[activeDetails].title}
+              src={MAJORPROJECTS[activeDetails].image}
+              alt={MAJORPROJECTS[activeDetails].title}
             />
           </div>
 
           <div className="order-first w-full space-y-2 md:w-2/12 md:order-last">
             <div className="font-semibold dark:text-white">
-              {workMajorDetails[activeDetails].title}
+              {MAJORPROJECTS[activeDetails].title}
             </div>
             <div className="text-zinc-800 dark:text-zinc-300">
-              {workMajorDetails[activeDetails].description}
+              {MAJORPROJECTS[activeDetails].description}
             </div>
             <div className="text-zinc-500">
-              {workMajorDetails[activeDetails].details}
+              {MAJORPROJECTS[activeDetails].details}
             </div>
 
             <div className="pt-3 border-t">
               <a
                 className="flex hover:underline dark:text-white"
-                href={workMajorDetails[activeDetails].url}
+                href={MAJORPROJECTS[activeDetails].url}
                 target="_blank"
                 rel="noreferrer"
               >

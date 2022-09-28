@@ -1,56 +1,8 @@
 import { Disclosure, Transition } from "@headlessui/react";
 
-const WorkMinor = () => {
-  const minorProjects = [
-    {
-      title: "Portfolio",
-      content: "The page you're currently viewing.",
-      tech: "Built with React, HeadlessUI and TailwindCSS.",
-      github: "https://github.com/lissomliksom/hellosimen",
-      url: false,
-    },
-    {
-      title: "Bestefars blomster",
-      content:
-        "A simple responsive image gallery with modals. One-day-project.",
-      tech: "Built with React and TailwindCSS.",
-      github: "https://github.com/lissomliksom/bestefars-blomster",
-      url: "https://bestefar.hellosimen.com/",
-    },
-    {
-      title: "Greyp",
-      content:
-        "A tool to generate multiple greyscale color palettes for design prototyping. Tweak variables to saturate greys with different RGB-values.",
-      tech: "Built with SCSS",
-      github: "https://github.com/lissomliksom/greyp",
-      url: "https://lissomliksom.github.io/greyp/",
-    },
-    {
-      title: "Rainbow-classless",
-      content:
-        "Classless CSS-framework: Write semantic HTML and get some basic styling. Includes styles for most common HTML-elements, including typography, tables, forms, images and more.",
-      tech: "CSS custom properties / variables",
-      github: "https://github.com/lissomliksom/rainbow-classless",
-      url: "https://lissomliksom.github.io/rainbow-classless/",
-    },
-    {
-      title: "Printsheet",
-      content:
-        "When producing custom worksheets for Lesekloden i needed specific styles for print. There are many stylesheets for print out there, but none were a perfect fit. So I created my own.",
-      tech: "CSS",
-      github: "https://github.com/lissomliksom/printsheet",
-      url: false,
-    },
-    {
-      title: "Lesekloden v1",
-      content:
-        "First version of my main project, Lesekloden.no. Used a lot of custom configurations to Wordpress, including a complete custom design system.",
-      tech: "Built with Wordpress and BulmaCSS",
-      github: false,
-      url: false,
-    },
-  ];
+import { MINORPROJECTS } from "../constants/projects";
 
+const WorkMinor = () => {
   return (
     <section>
       <div className="container px-5 py-6 mx-auto">
@@ -61,7 +13,7 @@ const WorkMinor = () => {
           </p>
         </div>
 
-        {minorProjects.map((project, idx) => (
+        {MINORPROJECTS.map((project, idx) => (
           <div
             key={idx}
             className="px-3 py-8 mb-1 rounded-sm bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:text-zinc-500 dark:text-zinc-600"
