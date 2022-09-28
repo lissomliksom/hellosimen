@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import { MAJOR_PROJECTS } from "../constants/projects";
+import { MAJOR_PROJECTS } from "../constants/projects"
 
 const WorkMajor = () => {
-  const [activeDetails, setActiveDetails] = useState(0);
+  const [activeDetails, setActiveDetails] = useState(0)
 
   return (
     <section>
@@ -92,7 +92,7 @@ const WorkMajor = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default WorkMajor;
+export default WorkMajor

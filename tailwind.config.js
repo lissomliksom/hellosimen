@@ -5,9 +5,9 @@ module.exports = {
     extend: {
       grayscale: {
         25: "25%",
-        75: "75%",
-      },
-    },
+        75: "75%"
+      }
+    }
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+  plugins: [require("@tailwindcss/typography")]
+}

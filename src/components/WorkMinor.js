@@ -1,6 +1,6 @@
-import { Disclosure, Transition } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react"
 
-import { MINOR_PROJECTS } from "../constants/projects";
+import { MINOR_PROJECTS } from "../constants/projects"
 
 const WorkMinor = () => {
   return (
@@ -120,7 +120,7 @@ const WorkMinor = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default WorkMinor;
+export default WorkMinor

@@ -1,9 +1,9 @@
-import { Tab } from "@headlessui/react";
+import { Tab } from "@headlessui/react"
 
-import { BIOGRAPHY } from "../constants/biography";
+import { BIOGRAPHY } from "../constants/biography"
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(" ")
 }
 
 const Bio = () => {
@@ -30,7 +30,7 @@ const Bio = () => {
       <div className="container px-5 pt-6 pb-6 mx-auto md:pt-36">
         <Tab.Group>
           <Tab.List className="flex space-x-6">
-            {Object.keys(BIOGRAPHY).map((bio) => (
+            {Object.keys(BIOGRAPHY).map(bio => (
               <Tab
                 key={bio}
                 className={({ selected }) =>
@@ -96,7 +96,7 @@ const Bio = () => {
         </Tab.Group>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Bio;
+export default Bio

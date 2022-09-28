@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import Header from "./components/Header";
-import Bio from "./components/Bio";
-import WorkMajor from "./components/WorkMajor";
-import WorkMinor from "./components/WorkMinor";
-import Contact from "./components/Contact";
+import Header from "./components/Header"
+import Bio from "./components/Bio"
+import WorkMajor from "./components/WorkMajor"
+import WorkMinor from "./components/WorkMinor"
+import Contact from "./components/Contact"
 
 const App = () => {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("")
 
   return (
     <div className={theme}>
@@ -19,7 +19,7 @@ const App = () => {
         <Contact />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

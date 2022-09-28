@@ -1,11 +1,11 @@
 const Header = ({ theme, setTheme }) => {
   const themeHandler = () => {
     if (theme === "") {
-      setTheme("dark");
+      setTheme("dark")
     } else {
-      setTheme("");
+      setTheme("")
     }
-  };
+  }
 
   return (
     <header>
@@ -57,7 +57,7 @@ const Header = ({ theme, setTheme }) => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -22,7 +22,7 @@ const Contact = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
