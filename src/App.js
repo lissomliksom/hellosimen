@@ -4,19 +4,21 @@ import Header from "./components/Header"
 import Bio from "./components/Bio"
 import WorkMajor from "./components/WorkMajor"
 import WorkMinor from "./components/WorkMinor"
-import Contact from "./components/Contact"
 
 const App = () => {
-  const [theme, setTheme] = useState("")
+  const [darkMode, setDarkMode] = useState('')
 
   return (
-    <div className={theme}>
-      <div className="transition-all duration-500 ease-in-out bg-white dark:bg-zinc-800">
-        <Header theme={theme} setTheme={setTheme} />
-        <Bio />
-        <WorkMajor />
-        <WorkMinor />
-        <Contact />
+    <div className={darkMode}>
+      <div className="bg-white dark:bg-zinc-800">
+        <div className="max-w-3xl px-5 mx-auto xl:max-w-5xl">
+          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+          <main className="space-y-24">
+            <Bio />
+            <WorkMajor />
+            <WorkMinor />
+          </main>
+        </div>
       </div>
     </div>
   )

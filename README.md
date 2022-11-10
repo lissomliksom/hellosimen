@@ -1,26 +1,31 @@
-# Todo
+# Introduction
 
-1. header
-   -- Switch-icon
+Repo for personal portfolio, HelloSimen.com
 
-2. bio.
-   -- Technologies:
-   ---- Modals for each tech / framework
+## Todo
 
-3. work.
+#### general.
 
-   -- Major projects: Descriptions
-   ---- Responsiveness
-   ---- What I've learned
+Define color scheme in tailwind.config.
+Font
+Mobile-responsiveness: Align, padding, margin, flex-wrap
 
-   -- Minor projects: Descriptions
-   ---- Responsiveness
-   ---- What I've learned
+#### components.
 
-   -- Completed Courses
-   ---- Traversy Media: Laravel
-   ---- Traversy Media: Modern Javascript
-   ---- Better Dev: Tailwind
+accordion
+modal
+links (github + external)
 
-4. other
-   -- Clean up component-structure
+#### work.
+
+Image-grid: Hvite transparent overlays
+What I've learned-section
+Cursor-not-allowed
+
+#### completed courses.
+
+Section
+
+---- Traversy Media: Laravel (n hours)
+---- Traversy Media: Modern Javascript (n hours)
+---- Better Dev: Tailwind (n hours)
