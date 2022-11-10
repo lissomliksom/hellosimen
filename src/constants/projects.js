@@ -3,6 +3,10 @@ import Work2 from "../images/work2.png"
 import Work3 from "../images/work3.png"
 import Work4 from "../images/work4.png"
 
+import Blendverse1 from "../images/blendverse1.png"
+import Blendverse2 from "../images/blendverse2.png"
+
+
 
 export const MAJOR_PROJECTS = [
   /**
@@ -26,22 +30,22 @@ export const MAJOR_PROJECTS = [
         url: "https://www.lesekloden.no"
       },
       {
-        title: "Lesekloden themepage",
-        image: Work2,
-        description: 
-          "One of Leseklodens multiple themepages.",
-        details:
-          "Includes accessible modals and tabbed content for multiple languages. All data fetched from JSON with Axios.",
-        url: "https://www.lesekloden.no/tema/fugler"
-      },
-      {
         title: "Lesekloden puzzle game",
-        image: Work3,
+        image: Work2,
         description: 
           "One of Leseklodens most popular games, with 25k+ plays monthly.",
         details:
-          "Generated math-tasks with 17 levels of difficulty. Reveals images gradually through a grid, depending on selected theme.",
+          "Generated math-tasks with 17 levels of difficulty. Reveals images gradually through a grid of tiles.",
         url: "https://www.lesekloden.no/plusslespill"
+      },
+      {
+        title: "Lesekloden themepage",
+        image: Work3,
+        description: 
+          "One of Leseklodens multiple themepages.",
+        details:
+          "Includes accessible modals and tabbed content for multiple languages. All data fetched from JSON.",
+        url: "https://www.lesekloden.no/tema/fugler"
       },
       {
         title: "Lesekloden worksheets",
@@ -50,7 +54,7 @@ export const MAJOR_PROJECTS = [
           "Grid-view of Leseklodens free worksheets available for download.",
         details:
           "All data is loaded conditionally via database, determined by membership status.",
-        url: "https://www.lesekloden.no/fag/4"
+        url: "https://www.lesekloden.no/fag/matematikk"
       }
     ]
   },
@@ -66,46 +70,36 @@ export const MAJOR_PROJECTS = [
     github: false,
     samples: [
       {
-        title: "Lesekloden frontpage",
-        image: Work1,
+        title: "Blendverse sidemenu",
+        image: Blendverse1,
         description: 
-          "The landingpage for Lesekloden.no.",
+          "Animated, mobile-responsive sidemenu with custom scrollbar.",
         details:
-          "Minimalistic design with CTAs for Leseklodens two user-groups: Children and teachers.",
-        url: "https://www.lesekloden.no"
+          "Uses React Router for navigation. Some routes are password-protected or unavailable to players.",
+        url: "https://dnd.hellosimen.com"
       },
       {
-        title: "Lesekloden themepage",
-        image: Work2,
+        title: "Blendverse soundboard",
+        image: Blendverse2,
         description: 
-          "One of Leseklodens multiple themepages.",
+          "Background soundscapes and music for sessions.",
         details:
-          "Includes accessible modals and tabbed content for multiple languages. All data fetched from JSON with Axios.",
-        url: "https://www.lesekloden.no/tema/fugler"
+          "Triggering darkmode sometimes highlight, transform or customize content throughout the app.",
+        url: "https://dnd.hellosimen.com"
       },
-      {
-        title: "Lesekloden puzzle game",
-        image: Work3,
-        description: 
-          "One of Leseklodens most popular games, with 25k+ plays monthly.",
-        details:
-          "Generated math-tasks with 17 levels of difficulty. Reveals images gradually through a grid, depending on selected theme.",
-        url: "https://www.lesekloden.no/plusslespill"
-      },
-      {
-        title: "Lesekloden worksheets",
-        image: Work4,
-        description:
-          "Grid-view of Leseklodens free worksheets available for download.",
-        details:
-          "All data is loaded conditionally via database, determined by membership status.",
-        url: "https://www.lesekloden.no/fag/4"
-      }
     ]
   }
 ]
 
 export const MINOR_PROJECTS = [
+  {
+    title: "Lesekloden V1",
+    type: "Full-stack project",
+    stack: ["Wordpress", "PHP", "Javascript", "BulmaCSS"],
+    description: "First version of my main project, Lesekloden.no. Used a lot of custom configurations to Wordpress, including a complete custom design system.",
+    url: false,
+    github: false
+  },
   {
     title: "Portfolio",
     type: "React",
@@ -145,13 +139,5 @@ export const MINOR_PROJECTS = [
     description: "When producing custom worksheets for Lesekloden i needed specific styles for print. There are many stylesheets for print out there, but none were a perfect fit. So I created my own.",
     url: false,
     github: "https://github.com/lissomliksom/printsheet",
-  },
-  {
-    title: "Lesekloden V1",
-    type: "Full stack",
-    stack: ["Wordpress", "PHP", "Javascript", "BulmaCSS"],
-    description: "First version of my main project, Lesekloden.no. Used a lot of custom configurations to Wordpress, including a complete custom design system.",
-    url: false,
-    github: false
   }
 ]

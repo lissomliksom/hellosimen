@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <div className={darkMode}>
-      <div className="bg-white dark:bg-zinc-800">
+      <div className="bg-white dark:bg-slate-800">
         <div className="max-w-3xl px-5 mx-auto xl:max-w-5xl">
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
           <main className="space-y-24">

@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       grayscale: {
-        25: "25%",
-        75: "75%"
+        15: "15%"
       }
     }
   },

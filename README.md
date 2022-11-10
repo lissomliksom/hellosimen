@@ -2,30 +2,20 @@
 
 Repo for personal portfolio, HelloSimen.com
 
-## Todo
+## Todo and future upgrades
 
 #### general.
 
-Define color scheme in tailwind.config.
-Font
-Mobile-responsiveness: Align, padding, margin, flex-wrap
+- decrease loadtime / pagesize
 
 #### components.
 
-accordion
-modal
-links (github + external)
+- make accordion-component for work-pages
+- make modal-component for images
+- make links-component (github + external)
+- extract classNames to utils.js
 
 #### work.
 
-Image-grid: Hvite transparent overlays
-What I've learned-section
-Cursor-not-allowed
-
-#### completed courses.
-
-Section
-
----- Traversy Media: Laravel (n hours)
----- Traversy Media: Modern Javascript (n hours)
----- Better Dev: Tailwind (n hours)
+- cursor-not-allowed bug
+- responsive image loading with srcset
