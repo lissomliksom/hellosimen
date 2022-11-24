@@ -19,9 +19,9 @@ const BioHeadline = () => {
           <path d="M60.8 15C60.3 14.6 59.7 14.4 59.1 14.3C59.2 14.4 59.4 14.4 59.5 14.5C62.5 16.8 59.4 22.1 57.7 26.9C56.3 30.7 55.1 34.6 55.3 38.4C56.1 55 39.4 62.9 29.4 59.9C39.2 64 57.4 56.2 56.6 38.9C56.4 35.1 57.5 31.4 59 27.4C60.6 22.6 63.7 17.3 60.8 15" fill="#E9C6AA"/>
           <path d="M47.5 30C41.3 30.7 32.2 39.6 38.6 49.3C33.9 39.5 41.6 32.9 46.5 30.6C47 30.2 47.5 30 47.5 30" fill="#E9C6AA"/>
         </svg>
-        <h2 className="text-2xl font-extrabold leading-9 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <h1 className="text-2xl font-extrabold leading-9 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           Hello, world!
-        </h2>
+        </h1>
       </div>
       <p className="text-gray-500">
         Personal portfolio of Simen F. Kristoffersen

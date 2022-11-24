@@ -7,6 +7,8 @@ Repo for personal portfolio, HelloSimen.com
 #### general.
 
 - decrease loadtime / pagesize
+- increase contrasts to 4.5:1.
+- replace deprecated / irrelevant <button> elements
 
 #### components.
 
@@ -17,5 +19,6 @@ Repo for personal portfolio, HelloSimen.com
 
 #### work.
 
+- change text 'show more' when accordion open.
 - cursor-not-allowed bug
 - responsive image loading with srcset

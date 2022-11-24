@@ -65,7 +65,7 @@ export const MAJOR_PROJECTS = [
     title: "Blendverse D&D Planner",
     type: "React",
     stack: ["React", "React Router", "Headless UI", "TailwindCSS"],
-    description: "A campaign-planner for Dungeons & Dragons, with multiple useful Dungeon Master-tools. Includes soundboard, image galleries, random  table generators and a day-night-cycle triggered by darkmode.",
+    description: "A campaign-planner for Dungeons & Dragons, with multiple useful Dungeon Master-tools. Includes soundboard, image galleries, and a day-night-cycle triggered by darkmode.",
     url: "https://dnd.hellosimen.com",
     github: false,
     samples: [
@@ -75,7 +75,7 @@ export const MAJOR_PROJECTS = [
         description: 
           "Animated, mobile-responsive sidemenu with custom scrollbar.",
         details:
-          "Uses React Router for navigation. Some routes are password-protected or unavailable to players.",
+          "Uses React Router for navigation. In the future some routes will be password-protected or unavailable to players.",
         url: "https://dnd.hellosimen.com"
       },
       {
